@@ -5,7 +5,6 @@ import asyncio
 import json
 import os
 import pprint
-import decimal
 
 from .common import BaseCrawler, PoloniexCrawler, KrakenCrawler, ExmoCrawler
 
@@ -70,13 +69,13 @@ def load_fetched_data():
     return data
 
 
-def do_group(couses_list):
+def do_group(courses_list):
     print("=" * 32)
     for c1, c2 in pairs:
         print("-" * 10, "{} -> {}".format(c2, c1), "-" * 10)
         ask_list = []
         bid_list = []
-        for crawler_name, courses in couses_list:
+        for crawler_name, courses in courses_list:
             name = crawler_name
             if name.endswith("Crawler"):
                 name = name[:-7]
@@ -96,8 +95,8 @@ def main():
     # test_kraken()
     # test_poloneix()
     # test_exmo()
-    #data = load_fetched_data()
-    #do_group(data)
+    # data = load_fetched_data()
+    # do_group(data)
 
     loop = asyncio.get_event_loop()
     loop.run_until_complete(amain())

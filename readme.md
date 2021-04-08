@@ -1,7 +1,7 @@
 Small crawler for crypto exchange markets
 =========================================
 
-Created: romiq.kh@gmail.com, 20
+Created: romiq.kh@gmail.com, 2021
 
 1. Download current rates for:
     * Exmo
